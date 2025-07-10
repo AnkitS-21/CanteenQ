@@ -1,4 +1,5 @@
-import { Text, View } from "react-native";
+import { Text, View, Button } from "react-native";
+import { Link } from "expo-router";
 
 export default function Index() {
   return (
@@ -7,9 +8,18 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        gap: 20,
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text>Welcome to CanteenQ!</Text>
+
+      <Link href="/login" asChild>
+        <Button title="Login" />
+      </Link>
+
+      <Link href="/register" asChild>
+        <Button title="Register" />
+      </Link>
     </View>
   );
 }
